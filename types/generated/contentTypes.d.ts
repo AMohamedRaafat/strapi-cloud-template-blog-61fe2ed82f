@@ -430,39 +430,33 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
-  collectionName: 'articles';
+export interface ApiNccNcc extends Struct.CollectionTypeSchema {
+  collectionName: 'nccs';
   info: {
-    description: 'Create your blog content';
-    displayName: 'Data';
-    pluralName: 'articles';
-    singularName: 'article';
+    displayName: 'NCC';
+    pluralName: 'nccs';
+    singularName: 'ncc';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    attachments: Schema.Attribute.Text;
-    committeeResolution: Schema.Attribute.Text;
+    attachments: Schema.Attribute.String;
+    committeeResolution: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    current: Schema.Attribute.Text &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 80;
-      }>;
+    current: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::article.article'
-    > &
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::ncc.ncc'> &
       Schema.Attribute.Private;
     name: Schema.Attribute.String;
     nationalId: Schema.Attribute.BigInteger;
-    num: Schema.Attribute.BigInteger;
-    opinion: Schema.Attribute.Text;
+    num: Schema.Attribute.String;
+    opinion: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     requested: Schema.Attribute.String;
+    UID: Schema.Attribute.UID<'num'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -979,7 +973,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
-      'api::article.article': ApiArticleArticle;
+      'api::ncc.ncc': ApiNccNcc;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

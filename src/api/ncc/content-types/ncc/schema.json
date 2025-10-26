@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "articles",
+  "collectionName": "nccs",
   "info": {
-    "singularName": "article",
-    "pluralName": "articles",
-    "displayName": "Data",
-    "description": "Create your blog content"
+    "singularName": "ncc",
+    "pluralName": "nccs",
+    "displayName": "NCC"
   },
   "options": {
     "draftAndPublish": true
@@ -13,7 +12,7 @@
   "pluginOptions": {},
   "attributes": {
     "num": {
-      "type": "biginteger"
+      "type": "string"
     },
     "nationalId": {
       "type": "biginteger"
@@ -22,20 +21,23 @@
       "type": "string"
     },
     "current": {
-      "type": "text",
-      "maxLength": 80
+      "type": "string"
     },
     "requested": {
       "type": "string"
     },
     "attachments": {
-      "type": "text"
+      "type": "string"
     },
     "opinion": {
-      "type": "text"
+      "type": "string"
     },
     "committeeResolution": {
-      "type": "text"
+      "type": "string"
+    },
+    "UID": {
+      "type": "uid",
+      "targetField": "num"
     }
   }
 }
