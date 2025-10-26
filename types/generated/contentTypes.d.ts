@@ -451,11 +451,12 @@ export interface ApiNccNcc extends Struct.CollectionTypeSchema {
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::ncc.ncc'> &
       Schema.Attribute.Private;
     name: Schema.Attribute.String;
-    nationalId: Schema.Attribute.BigInteger;
+    nationalId: Schema.Attribute.String;
     num: Schema.Attribute.String;
     opinion: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     requested: Schema.Attribute.String;
+    slug: Schema.Attribute.UID<'nationalId'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

@@ -15,7 +15,7 @@
       "type": "string"
     },
     "nationalId": {
-      "type": "biginteger"
+      "type": "string"
     },
     "name": {
       "type": "string"
@@ -34,6 +34,10 @@
     },
     "committeeResolution": {
       "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "nationalId"
     }
   }
 }

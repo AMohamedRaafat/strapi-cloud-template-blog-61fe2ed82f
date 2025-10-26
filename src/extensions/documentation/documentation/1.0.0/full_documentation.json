@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-10-26T14:09:50.912Z"
+    "x-generation-date": "2025-10-26T16:53:39.179Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -2009,9 +2009,7 @@
                 "type": "string"
               },
               "nationalId": {
-                "type": "string",
-                "pattern": "^\\d*$",
-                "example": "123456789"
+                "type": "string"
               },
               "name": {
                 "type": "string"
@@ -2029,6 +2027,9 @@
                 "type": "string"
               },
               "committeeResolution": {
+                "type": "string"
+              },
+              "slug": {
                 "type": "string"
               },
               "locale": {
@@ -2100,9 +2101,7 @@
             "type": "string"
           },
           "nationalId": {
-            "type": "string",
-            "pattern": "^\\d*$",
-            "example": "123456789"
+            "type": "string"
           },
           "name": {
             "type": "string"
@@ -2120,6 +2119,9 @@
             "type": "string"
           },
           "committeeResolution": {
+            "type": "string"
+          },
+          "slug": {
             "type": "string"
           },
           "createdAt": {
@@ -2426,9 +2428,7 @@
                   "type": "string"
                 },
                 "nationalId": {
-                  "type": "string",
-                  "pattern": "^\\d*$",
-                  "example": "123456789"
+                  "type": "string"
                 },
                 "name": {
                   "type": "string"
@@ -2446,6 +2446,9 @@
                   "type": "string"
                 },
                 "committeeResolution": {
+                  "type": "string"
+                },
+                "slug": {
                   "type": "string"
                 },
                 "createdAt": {
