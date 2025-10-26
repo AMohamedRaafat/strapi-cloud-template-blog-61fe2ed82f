@@ -4,7 +4,7 @@
   "info": {
     "singularName": "article",
     "pluralName": "articles",
-    "displayName": "Article",
+    "displayName": "Data",
     "description": "Create your blog content"
   },
   "options": {
@@ -12,38 +12,30 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
+    "num": {
+      "type": "biginteger"
+    },
+    "nationalId": {
+      "type": "biginteger"
+    },
+    "name": {
       "type": "string"
     },
-    "description": {
+    "current": {
       "type": "text",
       "maxLength": 80
     },
-    "slug": {
-      "type": "uid",
-      "targetField": "title"
+    "requested": {
+      "type": "string"
     },
-    "cover": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": ["images", "files", "videos"]
+    "attachments": {
+      "type": "text"
     },
-    "author": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::author.author",
-      "inversedBy": "articles"
+    "opinion": {
+      "type": "text"
     },
-    "category": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::category.category",
-      "inversedBy": "articles"
-    },
-    "blocks": {
-      "type": "dynamiczone",
-      "components": ["shared.media", "shared.quote", "shared.rich-text", "shared.slider"]
+    "committeeResolution": {
+      "type": "text"
     }
   }
 }
