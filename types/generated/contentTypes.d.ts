@@ -456,7 +456,6 @@ export interface ApiNccNcc extends Struct.CollectionTypeSchema {
     opinion: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     requested: Schema.Attribute.String;
-    UID: Schema.Attribute.UID<'num'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

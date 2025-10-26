@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-10-26T13:59:03.832Z"
+    "x-generation-date": "2025-10-26T14:09:50.912Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -2031,9 +2031,6 @@
               "committeeResolution": {
                 "type": "string"
               },
-              "UID": {
-                "type": "string"
-              },
               "locale": {
                 "type": "string"
               },
@@ -2123,9 +2120,6 @@
             "type": "string"
           },
           "committeeResolution": {
-            "type": "string"
-          },
-          "UID": {
             "type": "string"
           },
           "createdAt": {
@@ -2452,9 +2446,6 @@
                   "type": "string"
                 },
                 "committeeResolution": {
-                  "type": "string"
-                },
-                "UID": {
                   "type": "string"
                 },
                 "createdAt": {

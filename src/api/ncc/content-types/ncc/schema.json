@@ -34,10 +34,6 @@
     },
     "committeeResolution": {
       "type": "string"
-    },
-    "UID": {
-      "type": "uid",
-      "targetField": "num"
     }
   }
 }
